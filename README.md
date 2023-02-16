@@ -71,20 +71,26 @@ Refer below sample
 #### College
 ```yaml
 {
-    "name" : "iith",
-    "fullName" : "Indian Institute of Technology, Hyderabad",
-    "logoLink" : "https://functionup.s3.ap-south-1.amazonaws.com/colleges/iith.png",
-    "isDeleted" : false
+  status: true,
+  data: {
+        "name" : "iith",
+        "fullName" : "Indian Institute of Technology, Hyderabad",
+        "logoLink" : "https://functionup.s3.ap-south-1.amazonaws.com/colleges/iith.png",
+        "isDeleted" : false
+         }
 }
 ```
 #### Intern
 ```yaml
-   {
-    "isDeleted" : false,
-    "name" : "Jane Does",
-    "email" : "jane.doe@iith.in",
-    "mobile" : "90000900000",
-    "collegeId" : ObjectId("888771129c9ea621dc7f5e3b")
+{
+  status: true,
+  data: {
+        "isDeleted" : false,
+        "name" : "Jane Does",
+        "email" : "jane.doe@iith.in",
+        "mobile" : "90000900000",
+        "collegeId" : ObjectId("888771129c9ea621dc7f5e3b")
+        }
 }
 ```
 ## Response samples
@@ -92,6 +98,7 @@ Refer below sample
 ### College details
 ```yaml
 {
+  status: true,
   "data": {
     "name": "xyz",
     "fullName": "Some Institute of Engineering and Technology",
