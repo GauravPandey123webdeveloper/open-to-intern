@@ -1,4 +1,4 @@
-# Uranium
+# Technetium
 
 ## Open to Intern Project Requirement
 
