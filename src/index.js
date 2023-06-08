@@ -1,0 +1,11 @@
+const express= require('express')
+const mongoose=require('mongoose')
+const route= require('./route/route')
+const app= express()
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+app.use('/',route)
+mongoose.connect('mongodb+srv://gauravpandeyidforfunctionup:XvjHpLyNrIONLzb1@cluster0.a7th0vg.mongodb.net/open-to-intern?retryWrites=true&w=majority',{useNewUrlParser:true}).then(()=>console.log("mongoDb connected")).catch(err=>console.log(err.message))
+app.listen(process.env.PORT||3000, function(){
+    console.log("server has started on the port : ", process.env.PORT||3000)
+})
