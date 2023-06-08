@@ -1,0 +1,18 @@
+{
+  "name": "open-to-intern",
+  "version": "1.0.0",
+  "description": "this is the project that will manage the intern for colleges ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "author": "Gaurav pandey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
