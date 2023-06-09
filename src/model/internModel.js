@@ -23,5 +23,5 @@ const internSchema = new mongoose.Schema({
         default: false
     }
 
-},{timestamps:true})
-module.exports= mongoose.model("InternCollection", internSchema)
+}, { timestamps: true })
+module.exports = mongoose.model("InternCollection", internSchema)
