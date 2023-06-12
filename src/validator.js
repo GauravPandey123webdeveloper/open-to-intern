@@ -1,14 +1,20 @@
+// Function to validate if a string is valid data
 isValidData = function (a) {
-    if (typeof a === null && typeof a === undefined) return false;
-    if (typeof a === String && a.trim().length == 0) return false;
-    if (!(/^[A-Za-z]+$/.test(a))) return false;
-    return true
-}
-validEmail = function (email) {
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-}
-validMobile = function (mob) {
-    return /[0-9]{10}/.test(mob)
-}
+    if (a === null || a === undefined) return false; // Check if the input is null or undefined
+    if (typeof a !== 'string' || a.trim().length === 0) return false; // Check if the input is not a string or if it is an empty string after trimming
+    if (!(/^[A-Za-z\s]+$/.test(a))) return false; // Check if the input contains only letters or whitespace
+    return true; // If all conditions pass, the data is considered valid
+};
 
-module.exports = { isValidData, validEmail, validMobile }
+// Function to validate an email address
+validEmail = function (email) {
+    return /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email); // Check if the email matches the required pattern
+};
+
+// Function to validate a mobile number
+validMobile = function (mob) {
+    const trimmedMobile = mob.replace(/\s/g, ''); // Remove spaces from the mobile number
+    return /^[0-9]{10}$/.test(trimmedMobile); // Check if the mobile number consists of exactly 10 digits
+};
+
+module.exports = { isValidData, validEmail, validMobile };
