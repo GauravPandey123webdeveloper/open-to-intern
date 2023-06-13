@@ -10,7 +10,9 @@ const createIntern = async function (req, res) {
     try {
         const data = req.body;
         const { name, email, mobile } = data;
-
+        if(!mobile){
+            res.status(400).send({status:false, message:"mobile is missing"})
+        }
         // Validate name format
         if (!valid.isValidData(name)) {
             return res.status(400).send({ status: false, message: "Name should only contain letters" });
