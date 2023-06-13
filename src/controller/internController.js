@@ -1,5 +1,8 @@
+// importing college model to access the data of colleges 
 const collegeModel = require('../model/collegeModel');
+// importing intern model to get the data of the registered interns 
 const internModel = require('../model/internModel');
+// imorting validation module to check validation 
 const valid = require('../validator');
 
 // Controller function for creating an intern

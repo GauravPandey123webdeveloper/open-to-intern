@@ -1,3 +1,4 @@
+// importing  mongoose library for creating schema of the intern model 
 const mongoose = require('mongoose')
 const internSchema = new mongoose.Schema({
     name: {
@@ -14,7 +15,7 @@ const internSchema = new mongoose.Schema({
     },
     mobile: {
         type: String,
-        require: true,
+        required: true,
         trim:true,
         unique: true
     },

@@ -1,3 +1,4 @@
+// import mongoose model to create database for colleges
 const mongoose = require('mongoose')
 const collegeSchema = new mongoose.Schema({
    name: {

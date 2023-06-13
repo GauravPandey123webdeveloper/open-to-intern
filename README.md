@@ -1,7 +1,6 @@
 # Technetium
 
 ## Open to Intern Project Requirement
-
 ### Models
 
 - College Model
