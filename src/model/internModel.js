@@ -4,12 +4,12 @@ const internSchema = new mongoose.Schema({
     name: {
         type: String,
         trim:true,
-        require: true
+        required: true
         
     },
     email: {
         type: String,
-        require: true,
+        required: true,
         trim:true,
         unique: true
     },

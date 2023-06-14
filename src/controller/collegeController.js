@@ -54,12 +54,11 @@ const collegeDetails = async function (req, res) {
 // getting intern details for adding in college response
         const intern = await internModel.find({ collegeId: collegeId._id }).select({ _id: 1, name: 1, email: 1, mobile: 1 })
         //converting intern data into object because we can not easily add new data into the json form data 
-        const collegeObject = college.toObject();
+        const collegeObject = college.toObject();// toObject()==lean()
         // if interns are not found in the database
         if (intern.length == 0) {
             collegeObject.interns = "interns are not available"
         } else {
-            console.log(typeof college)
             collegeObject.interns = intern
         }
         // if college data not found then server error 404
@@ -73,3 +72,4 @@ const collegeDetails = async function (req, res) {
     }
 }
 module.exports = { createCollege, collegeDetails }
+//evaluator shivansh sharma TA
